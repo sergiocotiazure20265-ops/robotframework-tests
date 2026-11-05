@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-05T08:40:54.610809" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\tests">
+<suite id="s1-s1" name="Autenticar-Usuario" source="C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\tests\autenticar-usuario.robot">
+<test id="s1-s1-t1" name="Cenário 01 - Autenticar usuário com sucesso" line="10">
+<kw name="Given Usuário está na página de login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:55.800903" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
+<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-05T08:40:55.800348" elapsed="6.605764"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-05T08:41:02.408659" elapsed="0.072198"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:04.482688" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:02.481335" elapsed="2.001580"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:55.798057" elapsed="8.685066"/>
+</kw>
+<kw name="When Informa um email válido">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:04.485249" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<arg>id=emailLogin</arg>
+<arg>admin@bluestock.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:41:04.484508" elapsed="0.158468"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:06.645234" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:04.643204" elapsed="2.002363"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:04.483844" elapsed="2.161864"/>
+</kw>
+<kw name="And Informa uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:06.647042" level="INFO">Typing text 'Admin@123' into text field 'id=senhaLogin'.</msg>
+<arg>id=senhaLogin</arg>
+<arg>Admin@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:41:06.646720" elapsed="0.151584"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:08.800343" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:06.798831" elapsed="2.001642"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:06.646371" elapsed="2.154244"/>
+</kw>
+<kw name="And Clica no botão entrar">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:08.801685" level="INFO">Clicking button 'btnEntrar'.</msg>
+<arg>btnEntrar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:41:08.801343" elapsed="0.336223"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:11.140687" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:09.138477" elapsed="2.002443"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:08.801024" elapsed="2.340115"/>
+</kw>
+<kw name="Then Deve ser redirecionado para a página inicial do sistema">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:11.166132" level="INFO">Current page contains text 'Consulta de produtos'.</msg>
+<arg>Consulta de produtos</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-05T08:41:11.142299" elapsed="0.024072"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:11.189465" level="INFO">Current page contains text 'Pesquise, edite e exclua produtos cadastrados.'.</msg>
+<arg>Pesquise, edite e exclua produtos cadastrados.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-05T08:41:11.166719" elapsed="0.022888"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:11.491565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_sucesso.png"&gt;&lt;img src="evidencias/autenticacao_usuario_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/autenticacao_usuario_sucesso.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-05T08:41:11.189934" elapsed="0.301779"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-05T08:41:11.491934" elapsed="2.681898"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:11.141764" elapsed="3.032207"/>
+</kw>
+<doc>Validar autenticação com credenciais válidas</doc>
+<tag>login</tag>
+<tag>positivo</tag>
+<status status="PASS" start="2026-11-05T08:40:55.796354" elapsed="18.378102"/>
+</test>
+<test id="s1-s1-t2" name="Cenário 02 - Autenticar usuário com acesso negado" line="20">
+<kw name="Given Usuário está na página de login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:14.176230" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
+<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-05T08:41:14.176017" elapsed="2.657513"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-05T08:41:16.834679" elapsed="0.075199"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:18.912375" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:16.910337" elapsed="2.002325"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:14.175575" elapsed="4.737240"/>
+</kw>
+<kw name="When Informa um email válido">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:18.914733" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<arg>id=emailLogin</arg>
+<arg>admin@bluestock.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:41:18.914224" elapsed="0.217766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:21.134769" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:19.132780" elapsed="2.002242"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:18.913512" elapsed="2.221736"/>
+</kw>
+<kw name="And Informa uma senha inválida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:21.138786" level="INFO">Typing text 'SenhaInvalida@123' into text field 'id=senhaLogin'.</msg>
+<arg>id=senhaLogin</arg>
+<arg>SenhaInvalida@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:41:21.137294" elapsed="0.139516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:23.279216" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:21.277046" elapsed="2.002571"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:21.136342" elapsed="2.143616"/>
+</kw>
+<kw name="And Clica no botão entrar">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:23.282929" level="INFO">Clicking button 'btnEntrar'.</msg>
+<arg>btnEntrar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:41:23.282346" elapsed="0.106613"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:41:25.390072" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:41:23.389170" elapsed="2.001041"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:23.281602" elapsed="2.108722"/>
+</kw>
+<kw name="Then Deve ser negado o acesso ao sistema">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:25.409590" level="INFO">Current page contains text 'E-mail ou senha inválidos.'.</msg>
+<arg>E-mail ou senha inválidos.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-05T08:41:25.391081" elapsed="0.018621"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:41:25.909428" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_negado.png"&gt;&lt;img src="evidencias/autenticacao_usuario_negado.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/autenticacao_usuario_negado.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-05T08:41:25.409920" elapsed="0.499629"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-05T08:41:25.909951" elapsed="2.368431"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:41:25.390761" elapsed="2.887847"/>
+</kw>
+<doc>Validar autenticação com senha incorreta</doc>
+<tag>login</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-11-05T08:41:14.174992" elapsed="14.104236"/>
+</test>
+<doc>Testes de autenticação de usuários no sistema</doc>
+<status status="PASS" start="2026-11-05T08:40:54.742570" elapsed="33.537704"/>
+</suite>
+<status status="PASS" start="2026-11-05T08:40:54.615027" elapsed="33.666614"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">negativo</stat>
+<stat pass="1" fail="0" skip="0">positivo</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Autenticar-Usuario" id="s1-s1" pass="2" fail="0" skip="0">Tests.Autenticar-Usuario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
