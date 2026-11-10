@@ -1,214 +1,344 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-05T08:40:54.610809" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\tests">
-<suite id="s1-s1" name="Autenticar-Usuario" source="C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\tests\autenticar-usuario.robot">
-<test id="s1-s1-t1" name="Cenário 01 - Autenticar usuário com sucesso" line="10">
-<kw name="Given Usuário está na página de login">
+<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-10T08:44:12.143258" rpa="false" schemaversion="5">
+<suite id="s1" name="Consultar-Produtos" source="C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\tests\consultar-produtos.robot">
+<test id="s1-t1" name="Cenário 01 - Consultar produto com sucesso" line="23">
+<kw name="Given Usuário está autenticado no sistema">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-11-10T08:44:13.103976" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\evidencias"&gt;C:\Users\sergi\Desktop\COTI - Aulas\2026 Teste de Software TQ Manha - Automação\projetos\robotframework-tests\evidencias&lt;/a&gt;' already exists.</msg>
+<arg>${OUTPUT DIR}${/}evidencias</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-11-10T08:44:13.103662" elapsed="0.000403"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-11-10T08:44:13.104267" elapsed="0.000243"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:55.800903" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
-<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
-<arg>chrome</arg>
+<msg time="2026-11-10T08:44:13.105008" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
+<arg>${URL_BASE}/index.html</arg>
+<arg>${NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-05T08:40:55.800348" elapsed="6.605764"/>
+<status status="PASS" start="2026-11-10T08:44:13.104807" elapsed="1.686718"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-05T08:41:02.408659" elapsed="0.072198"/>
+<status status="PASS" start="2026-11-10T08:44:14.791870" elapsed="0.047591"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:04.482688" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:02.481335" elapsed="2.001580"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:55.798057" elapsed="8.685066"/>
-</kw>
-<kw name="When Informa um email válido">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:04.485249" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=emailLogin</arg>
-<arg>admin@bluestock.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:41:04.484508" elapsed="0.158468"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:14.839844" elapsed="0.045730"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:06.645234" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:04.643204" elapsed="2.002363"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:41:04.483844" elapsed="2.161864"/>
-</kw>
-<kw name="And Informa uma senha válida">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:06.647042" level="INFO">Typing text 'Admin@123' into text field 'id=senhaLogin'.</msg>
-<arg>id=senhaLogin</arg>
-<arg>Admin@123</arg>
+<msg time="2026-11-10T08:44:14.886983" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<arg>id=emailLogin</arg>
+<arg>${EMAIL_ADMIN}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:41:06.646720" elapsed="0.151584"/>
+<status status="PASS" start="2026-11-10T08:44:14.886277" elapsed="0.193555"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:08.800343" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:06.798831" elapsed="2.001642"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:15.080682" level="INFO">Typing password into text field 'id=senhaLogin'.</msg>
+<msg time="2026-11-10T08:44:15.143652" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=senhaLogin</arg>
+<arg>${SENHA_ADMIN}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.080200" elapsed="0.179899"/>
 </kw>
-<status status="PASS" start="2026-11-05T08:41:06.646371" elapsed="2.154244"/>
-</kw>
-<kw name="And Clica no botão entrar">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:08.801685" level="INFO">Clicking button 'btnEntrar'.</msg>
-<arg>btnEntrar</arg>
+<msg time="2026-11-10T08:44:15.261204" level="INFO">Clicking button 'id=btnEntrar'.</msg>
+<arg>id=btnEntrar</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:41:08.801343" elapsed="0.336223"/>
+<status status="PASS" start="2026-11-10T08:44:15.260570" elapsed="0.368282"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:11.140687" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:09.138477" elapsed="2.002443"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tituloConsultaProdutos</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.629078" elapsed="0.027943"/>
 </kw>
-<status status="PASS" start="2026-11-05T08:41:08.801024" elapsed="2.340115"/>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:15.667907" level="INFO">Current location is 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/produtos.html'.</msg>
+<arg>${URL_BASE}/produtos.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.657360" elapsed="0.010815"/>
 </kw>
-<kw name="Then Deve ser redirecionado para a página inicial do sistema">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:11.166132" level="INFO">Current page contains text 'Consulta de produtos'.</msg>
-<arg>Consulta de produtos</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-05T08:41:11.142299" elapsed="0.024072"/>
+<status status="PASS" start="2026-11-10T08:44:13.102806" elapsed="2.565674"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:11.189465" level="INFO">Current page contains text 'Pesquise, edite e exclua produtos cadastrados.'.</msg>
-<arg>Pesquise, edite e exclua produtos cadastrados.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-05T08:41:11.166719" elapsed="0.022888"/>
+<kw name="And Cadastra um produto com código novo">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-11-10T08:44:15.673714" level="INFO">${identificador} = 7f13be9a37df421db7ccbd4931a01c26</msg>
+<var>${identificador}</var>
+<arg>uuid.uuid4().hex</arg>
+<arg>modules=uuid</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.671231" elapsed="0.002657"/>
 </kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-11-10T08:44:15.675982" level="INFO">${IDENTIFICADOR} = 7f13be9a37df421db7ccbd4931a01c26</msg>
+<arg>${IDENTIFICADOR}</arg>
+<arg>${identificador}</arg>
+<doc>Makes the variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.674670" elapsed="0.001438"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-11-10T08:44:15.677339" level="INFO">${CODIGO_PRODUTO} = QA-7f13be9a37df421db7ccbd4931a01c26</msg>
+<arg>${CODIGO_PRODUTO}</arg>
+<arg>QA-${identificador}</arg>
+<doc>Makes the variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.676446" elapsed="0.000959"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:15.677812" level="INFO">Clicking link 'id=btnNovoProduto'.</msg>
+<arg>id=btnNovoProduto</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.677550" elapsed="0.299960"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=codigoProduto</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:15.978056" elapsed="0.029161"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.008098" level="INFO">Typing text 'QA-7f13be9a37df421db7ccbd4931a01c26' into text field 'id=codigoProduto'.</msg>
+<arg>id=codigoProduto</arg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.007582" elapsed="0.153627"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.161815" level="INFO">Typing text 'Notebook Teste Consulta' into text field 'id=nomeProduto'.</msg>
+<arg>id=nomeProduto</arg>
+<arg>${NOME_PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.161465" elapsed="0.299629"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.462217" level="INFO">Selecting options from selection list 'id=categoriaProduto' by label Informática.</msg>
+<arg>id=categoriaProduto</arg>
+<arg>${CATEGORIA}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.461556" elapsed="0.211161"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.673767" level="INFO">Typing text '2500' into text field 'id=precoProduto'.</msg>
+<arg>id=precoProduto</arg>
+<arg>2500</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.673271" elapsed="0.103379"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.777296" level="INFO">Typing text '10' into text field 'id=estoqueProduto'.</msg>
+<arg>id=estoqueProduto</arg>
+<arg>${ESTOQUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.776916" elapsed="0.121250"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.899687" level="INFO">Selecting options from selection list 'id=statusProduto' by label Ativo.</msg>
+<arg>id=statusProduto</arg>
+<arg>${STATUS_PRODUTO}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.898876" elapsed="0.087373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:16.987109" level="INFO">Typing text 'Produto criado para validar a consulta por código.' into text field 'id=descricaoProduto'.</msg>
+<arg>id=descricaoProduto</arg>
+<arg>Produto criado para validar a consulta por código.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:16.986760" elapsed="0.232312"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:17.219978" level="INFO">Clicking button 'id=btnSalvarProduto'.</msg>
+<arg>id=btnSalvarProduto</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:17.219656" elapsed="0.181902"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=alertaFormularioProduto</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:17.402213" elapsed="0.032951"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>id=alertaFormularioProduto</arg>
+<arg>Produto cadastrado com sucesso.</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2026-11-10T08:44:17.435680" elapsed="0.053387"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:17.490639" level="INFO">Verifying element 'id=alertaFormularioProduto' contains exact text 'Produto cadastrado com sucesso.'.</msg>
+<arg>id=alertaFormularioProduto</arg>
+<arg>Produto cadastrado com sucesso.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:44:17.489687" elapsed="0.052984"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-11-10T08:44:17.543396" level="INFO">Código gerado para pesquisa: QA-7f13be9a37df421db7ccbd4931a01c26</msg>
+<arg>Código gerado para pesquisa: ${CODIGO_PRODUTO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-11-10T08:44:17.542995" elapsed="0.000481"/>
+</kw>
+<kw name="Deve gerar evidência">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:11.491565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_sucesso.png"&gt;&lt;img src="evidencias/autenticacao_usuario_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>evidencias/autenticacao_usuario_sucesso.png</arg>
+<msg time="2026-11-10T08:44:17.854351" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/cadastro_para_consulta_7f13be9a37df421db7ccbd4931a01c26.png"&gt;&lt;img src="evidencias/cadastro_para_consulta_7f13be9a37df421db7ccbd4931a01c26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT DIR}${/}evidencias${/}${nome}_${IDENTIFICADOR}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-11-05T08:41:11.189934" elapsed="0.301779"/>
+<status status="PASS" start="2026-11-10T08:44:17.544091" elapsed="0.310381"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-05T08:41:11.491934" elapsed="2.681898"/>
+<arg>cadastro_para_consulta</arg>
+<status status="PASS" start="2026-11-10T08:44:17.543684" elapsed="0.310903"/>
 </kw>
-<status status="PASS" start="2026-11-05T08:41:11.141764" elapsed="3.032207"/>
+<status status="PASS" start="2026-11-10T08:44:15.669796" elapsed="2.184888"/>
 </kw>
-<doc>Validar autenticação com credenciais válidas</doc>
-<tag>login</tag>
+<kw name="And Acessa a página de consulta de produtos">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:17.855584" level="INFO">Clicking link 'id=menuConsultaProdutos'.</msg>
+<arg>id=menuConsultaProdutos</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:17.855342" elapsed="0.202166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=campoBuscaProduto</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.058202" elapsed="0.060647"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.130512" level="INFO">Current location is 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/produtos.html'.</msg>
+<arg>${URL_BASE}/produtos.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.119702" elapsed="0.011045"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:44:17.855033" elapsed="0.275833"/>
+</kw>
+<kw name="When Pesquisa pelo código do produto cadastrado">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.132826" level="INFO">Typing text 'QA-7f13be9a37df421db7ccbd4931a01c26' into text field 'id=campoBuscaProduto'.</msg>
+<arg>id=campoBuscaProduto</arg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.131824" elapsed="0.455755"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:44:18.131420" elapsed="0.456555"/>
+</kw>
+<kw name="Then Deve exibir o produto cadastrado nos resultados">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Validar resultado da pesquisa">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.628290" level="INFO">${quantidade} = 1</msg>
+<var>${quantidade}</var>
+<arg>css=#corpoTabelaProdutos &gt; tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.594776" elapsed="0.033684"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-10T08:44:18.629874" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${quantidade}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.629109" elapsed="0.001185"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.632413" level="INFO">Verifying element 'id=produtoCodigo-1' contains exact text 'QA-7f13be9a37df421db7ccbd4931a01c26'.</msg>
+<arg>id=produtoCodigo-1</arg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.631136" elapsed="0.061211"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.694266" level="INFO">Verifying element 'id=produtoNome-1' contains exact text 'Notebook Teste Consulta'.</msg>
+<arg>id=produtoNome-1</arg>
+<arg>${NOME_PRODUTO}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.693093" elapsed="0.044913"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.738684" level="INFO">Verifying element 'id=produtoCategoria-1' contains exact text 'Informática'.</msg>
+<arg>id=produtoCategoria-1</arg>
+<arg>${CATEGORIA}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.738282" elapsed="0.034989"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.774180" level="INFO">Verifying element 'id=produtoEstoque-1' contains exact text '10'.</msg>
+<arg>id=produtoEstoque-1</arg>
+<arg>${ESTOQUE}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.773670" elapsed="0.037118"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.812438" level="INFO">Verifying element 'id=produtoStatus-1' contains exact text 'Ativo'.</msg>
+<arg>id=produtoStatus-1</arg>
+<arg>${STATUS_PRODUTO}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.811490" elapsed="0.038104"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.896261" level="INFO">Element 'id=linhaProduto-1' is displayed.</msg>
+<arg>id=linhaProduto-1</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.849969" elapsed="0.046523"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:18.939613" level="INFO">Element 'id=mensagemSemProdutos' exists but is not displayed.</msg>
+<arg>id=mensagemSemProdutos</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.897107" elapsed="0.042742"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:44:18.592032" elapsed="0.348052"/>
+</kw>
+<arg>10s</arg>
+<arg>500ms</arg>
+<arg>Validar resultado da pesquisa</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.590087" elapsed="0.350378"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:44:18.589142" elapsed="0.351484"/>
+</kw>
+<kw name="And Deve gerar evidência">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:44:19.283534" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/consulta_produto_sucesso_7f13be9a37df421db7ccbd4931a01c26.png"&gt;&lt;img src="evidencias/consulta_produto_sucesso_7f13be9a37df421db7ccbd4931a01c26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT DIR}${/}evidencias${/}${nome}_${IDENTIFICADOR}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-10T08:44:18.943713" elapsed="0.340016"/>
+</kw>
+<arg>consulta_produto_sucesso</arg>
+<status status="PASS" start="2026-11-10T08:44:18.942053" elapsed="0.341839"/>
+</kw>
+<kw name="Finalizar teste" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Run Keyword And Ignore Error</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${OUTPUT DIR}${/}evidencias${/}falha_{index}.png</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-11-10T08:44:19.284994" elapsed="0.000555"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-10T08:44:19.285790" elapsed="2.245116"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:44:19.284465" elapsed="2.246588"/>
+</kw>
+<doc>Cadastrar um produto e consultar pelo código gerado</doc>
+<tag>consulta</tag>
 <tag>positivo</tag>
-<status status="PASS" start="2026-11-05T08:40:55.796354" elapsed="18.378102"/>
+<tag>produto</tag>
+<status status="PASS" start="2026-11-10T08:44:13.101431" elapsed="8.429922"/>
 </test>
-<test id="s1-s1-t2" name="Cenário 02 - Autenticar usuário com acesso negado" line="20">
-<kw name="Given Usuário está na página de login">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:14.176230" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
-<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-05T08:41:14.176017" elapsed="2.657513"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-05T08:41:16.834679" elapsed="0.075199"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:18.912375" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:16.910337" elapsed="2.002325"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:41:14.175575" elapsed="4.737240"/>
-</kw>
-<kw name="When Informa um email válido">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:18.914733" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
-<arg>id=emailLogin</arg>
-<arg>admin@bluestock.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:41:18.914224" elapsed="0.217766"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:21.134769" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:19.132780" elapsed="2.002242"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:41:18.913512" elapsed="2.221736"/>
-</kw>
-<kw name="And Informa uma senha inválida">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:21.138786" level="INFO">Typing text 'SenhaInvalida@123' into text field 'id=senhaLogin'.</msg>
-<arg>id=senhaLogin</arg>
-<arg>SenhaInvalida@123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:41:21.137294" elapsed="0.139516"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:23.279216" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:21.277046" elapsed="2.002571"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:41:21.136342" elapsed="2.143616"/>
-</kw>
-<kw name="And Clica no botão entrar">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:23.282929" level="INFO">Clicking button 'btnEntrar'.</msg>
-<arg>btnEntrar</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:41:23.282346" elapsed="0.106613"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:41:25.390072" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:41:23.389170" elapsed="2.001041"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:41:23.281602" elapsed="2.108722"/>
-</kw>
-<kw name="Then Deve ser negado o acesso ao sistema">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:25.409590" level="INFO">Current page contains text 'E-mail ou senha inválidos.'.</msg>
-<arg>E-mail ou senha inválidos.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-05T08:41:25.391081" elapsed="0.018621"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:41:25.909428" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_negado.png"&gt;&lt;img src="evidencias/autenticacao_usuario_negado.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>evidencias/autenticacao_usuario_negado.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-11-05T08:41:25.409920" elapsed="0.499629"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-05T08:41:25.909951" elapsed="2.368431"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:41:25.390761" elapsed="2.887847"/>
-</kw>
-<doc>Validar autenticação com senha incorreta</doc>
-<tag>login</tag>
-<tag>negativo</tag>
-<status status="PASS" start="2026-11-05T08:41:14.174992" elapsed="14.104236"/>
-</test>
-<doc>Testes de autenticação de usuários no sistema</doc>
-<status status="PASS" start="2026-11-05T08:40:54.742570" elapsed="33.537704"/>
-</suite>
-<status status="PASS" start="2026-11-05T08:40:54.615027" elapsed="33.666614"/>
+<doc>Teste de consulta de produtos por código</doc>
+<status status="PASS" start="2026-11-10T08:44:12.146612" elapsed="9.386550"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">login</stat>
-<stat pass="1" fail="0" skip="0">negativo</stat>
+<stat pass="1" fail="0" skip="0">consulta</stat>
 <stat pass="1" fail="0" skip="0">positivo</stat>
+<stat pass="1" fail="0" skip="0">produto</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
-<stat name="Autenticar-Usuario" id="s1-s1" pass="2" fail="0" skip="0">Tests.Autenticar-Usuario</stat>
+<stat name="Consultar-Produtos" id="s1" pass="1" fail="0" skip="0">Consultar-Produtos</stat>
 </suite>
 </statistics>
 <errors>
